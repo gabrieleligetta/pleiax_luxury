@@ -1,0 +1,56 @@
+
+
+.golden {
+    color : #d4af37!important;
+}
+
+.carousel {
+    max-height: 700px;
+    overflow: hidden;
+}
+.carousel-image{
+    vertical-align: middle;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+}
+
+.bk-black {
+    background-color : black!important;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+.full-width-resp {
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw !important;
+    margin-bottom: 50px;
+}
+
+.rwd-video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 54.25%;
+    padding-top: 30px;
+    position: relative;
+}
+.rwd-video iframe,
+.rwd-video object,
+.rwd-video embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}

@@ -15,13 +15,14 @@ class CreateCarsTable extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable('false');
             $table->ForeignId('model_id');
             $table->foreign('model_id')->on('models')->references('id');
             $table->string('color');
+            $table->string('matriculation_year');
             $table->string('license_plate');
             $table->decimal('price');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

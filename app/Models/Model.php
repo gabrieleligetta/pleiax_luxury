@@ -9,7 +9,7 @@ class Model extends BaseModel
 {
     use HasFactory;
 
-    public function brands()
+    public function brand()
     {
         return $this->belongsTo(Brand::class);
     }

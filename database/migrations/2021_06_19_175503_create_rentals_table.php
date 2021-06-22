@@ -17,12 +17,14 @@ class CreateRentalsTable extends Migration
             $table->id();
             $table->ForeignId('user_id');
             $table->foreign('user_id')->on('users')->references('id');
-            $table->dateTime('rental_start');
-            $table->dateTime('rental_end');
-            $table->ForeignId('package_id');
+            $table->ForeignId('car_id');
+            $table->foreign('car_id')->on('cars')->references('id');
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
+            $table->ForeignId('package_id')->nullable();
             $table->foreign('package_id')->on('packages')->references('id');
-            $table->softDeletes();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

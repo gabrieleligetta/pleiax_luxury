@@ -16,10 +16,14 @@ class CreateModelsTable extends Migration
         Schema::create('models', function (Blueprint $table) {
             $table->id();
             $table->ForeignId('brand_id');
-                $table->foreign('brand_id')->on('brands')->references('id');
-                $table->string('name')->nullable('false');
-                $table->softDeletes();
+            $table->foreign('brand_id')->on('brands')->references('id');
+            $table->string('name')->nullable('false');
+            $table->string('image_url')->default('https://loremflickr.com/320/240');
+            $table->string('year_begin')->nullable('true');
+            $table->string('year_end')->nullable('true');
+            $table->integer('generation')->nullable('true');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
