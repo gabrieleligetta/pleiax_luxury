@@ -53,7 +53,12 @@
                         </ul>
 
                         <div class="card-footer">
-                            <a href="" class="btn btn-outline-dark">Lo voglio!</a>
+                            @guest
+                            <a href="{{route('register')}}" class="btn btn-outline-dark">Lo voglio!</a>
+                            @endguest
+                            @auth
+                                    <a href="#" class="end_of_demo btn btn-outline-dark">Lo voglio!</a>
+                                @endauth
                         </div>
                     </div>
                 </div>
@@ -67,5 +72,10 @@
         $( ".pacchetti" ).click(function() {
             $( "#div_pacchetti" ).toggle();
         });
+
+        $(".end_of_demo").click(function () {
+            alert("Uh Oh! sembra che tu abbia raggiunto la fine della demo! Spero che vi sia piaciuta!");
+        });
+
     </script>
 @endsection
